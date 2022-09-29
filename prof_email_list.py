@@ -13,6 +13,8 @@ from bs4 import BeautifulSoup
 
 import urllib.parse
 
+import json
+
 def get_department_page(extension):
     # get web page
     url = f'https://www.uwindsor.ca/directory/department/{extension}'
@@ -69,4 +71,4 @@ def get_list():
 
 if __name__ == "__main__":
     emails = get_list()
-    print(emails)
+    print(json.dumps(emails))
